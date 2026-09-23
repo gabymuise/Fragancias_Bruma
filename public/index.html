@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fragancias Bruma — Control del negocio</title>
+<meta name="description" content="Control compartido de productos, decants, compras, ventas, gastos y ganancias de Fragancias Bruma.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312364a'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia' font-size='44' fill='%23f7f1e8'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/tables.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body><a class="skip-link" href="#mainContent">Ir al contenido</a><noscript>Activá JavaScript para utilizar el control de Fragancias Bruma.</noscript>
+<section id="loginPanel">
+<p class="eyebrow">Fragancias Bruma</p><h1>Ingresar al negocio</h1>
+<p>Acceso para usuarios autorizados.</p><form id="loginForm">
+<label class="field">Correo electrónico<input type="email" id="loginEmail" autocomplete="username" required></label><br>
+<label class="field">Contraseña<input type="password" id="loginPassword" autocomplete="current-password" required></label><br>
+<button class="primary" id="loginButton" type="submit">Ingresar</button>
+<button id="loginLogout" type="button" hidden>Cerrar sesión</button>
+<p id="loginError" class="error" role="alert"></p></form></section>
+<div class="app" id="businessApp" hidden><aside><div class="brand"><span>Fragancias</span><strong>BRUMA</strong><small>MIRAMAR</small></div><nav aria-label="Secciones" id="nav"></nav><div class="aside-bottom"><b>Tu negocio, en orden.</b>Perfumes, cosméticos y decants.<br>Importes en pesos argentinos.</div></aside>
+<main id="mainContent" tabindex="-1"><header class="top"><div><p class="eyebrow">Control del negocio</p><h1 id="pageTitle" tabindex="-1">Resumen</h1></div><div class="top-actions"><button data-action="refresh">Actualizar</button><button data-action="logout">Salir</button><button data-action="backup">Exportar respaldo</button><button data-action="go" data-view="Guía">Cómo usar</button></div></header><p class="storage" id="storageStatus"></p><div id="content"></div></main></div>
+<dialog id="editor" aria-labelledby="dialogTitle"><form id="entryForm"><div class="dialog-head"><h2 id="dialogTitle"></h2><button type="button" class="quiet" data-action="close" aria-label="Cerrar formulario">✕</button></div><div class="dialog-body"><div class="fields" id="fields"></div><div class="estimate" id="estimate" aria-live="polite"></div><p class="error" id="formError" role="alert"></p></div><div class="dialog-foot"><button type="button" data-action="close">Cancelar</button><button type="submit" class="primary">Guardar registro</button></div></form></dialog>
+<dialog id="confirmDialog" aria-labelledby="confirmTitle"><div class="dialog-head"><h2 id="confirmTitle">Confirmar cambio</h2></div><div class="dialog-body"><p id="confirmText"></p></div><div class="dialog-foot"><button id="confirmNo">Cancelar</button><button id="confirmYes" class="primary">Confirmar</button></div></dialog>
+<input type="file" id="importFile" accept=".json,application/json" hidden><div id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/config.js"></script>
+<script src="js/core/state.js"></script>
+<script src="js/core/calculations.js"></script>
+<script src="js/components/ui.js"></script>
+<script src="js/pages/resumen.js"></script>
+<script src="js/pages/productos.js"></script>
+<script src="js/pages/compras.js"></script>
+<script src="js/pages/decants.js"></script>
+<script src="js/pages/ventas.js"></script>
+<script src="js/pages/gastos.js"></script>
+<script src="js/pages/ajustes.js"></script>
+<script src="js/pages/registros.js"></script>
+<script src="js/pages/guia.js"></script>
+<script src="js/components/forms.js"></script>
+<script src="js/services/supabase.js"></script>
+<script src="js/router.js"></script>
+<script src="js/events.js"></script>
+<script src="js/app.js"></script>
+</body></html>

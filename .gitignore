@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.env
+.env.*
+backups/
+privado/
+respaldo*.json
+Bruma_*.json
+*.zip
+database/02_autorizar_usuarios.sql

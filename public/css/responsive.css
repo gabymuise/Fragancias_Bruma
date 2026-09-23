@@ -1,0 +1,539 @@
+/* Adaptación original del panel. */
+@media(min-width:1500px) {
+  main {
+    padding: 35px 55px
+  }
+
+  .stat strong {
+    font-size: 32px
+  }
+}
+
+@media(max-width:1050px) {
+  .app {
+    grid-template-columns: 190px 1fr
+  }
+
+  aside {
+    padding: 26px 12px
+  }
+
+  main {
+    padding: 25px 22px
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .split {
+    grid-template-columns: 1fr
+  }
+
+  .top {
+    align-items: flex-start;
+    flex-wrap: wrap
+  }
+
+  .brand strong {
+    font-size: 32px
+  }
+}
+
+@media(max-width:700px) {
+  .app {
+    display: block
+  }
+
+  aside {
+    height: auto;
+    position: static;
+    padding: 20px 16px 10px
+  }
+
+  .brand {
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 9px
+  }
+
+  .brand strong {
+    font-size: 27px;
+    letter-spacing: 3px
+  }
+
+  .brand span {
+    font-size: 10px;
+    letter-spacing: 1.7px
+  }
+
+  .brand small,
+  .aside-bottom {
+    display: none
+  }
+
+  nav {
+    display: flex;
+    overflow: auto;
+    padding-top: 16px;
+    gap: 5px;
+    padding-bottom: 5px
+  }
+
+  nav button {
+    flex-shrink: 0;
+    padding: 9px 12px;
+    font-size: 14px
+  }
+
+  nav .num {
+    display: none
+  }
+
+  main {
+    padding: 22px 16px
+  }
+
+  .top h1 {
+    font-size: 24px
+  }
+
+  .top-actions {
+    flex-wrap: wrap
+  }
+
+  .top {
+    margin-bottom: 18px
+  }
+
+  .stats {
+    gap: 10px
+  }
+
+  .stat {
+    padding: 17px 14px
+  }
+
+  .stat strong {
+    font-size: 22px
+  }
+
+  .heading {
+    align-items: flex-start
+  }
+
+  .heading h2 {
+    font-size: 20px
+  }
+
+  .fields {
+    grid-template-columns: 1fr
+  }
+
+  .field.wide {
+    grid-column: auto
+  }
+
+  .dialog-body,
+  .dialog-head {
+    padding: 18px
+  }
+
+  .dialog-foot {
+    padding: 16px 18px
+  }
+
+  .panel-head {
+    padding: 17px
+  }
+
+  .storage {
+    font-size: 12px
+  }
+
+  td,
+  th {
+    padding: 12px
+  }
+
+  .controls {
+    width: 100%
+  }
+
+  .controls input {
+    flex: 1
+  }
+
+  .stat small {
+    font-size: 12px
+  }
+
+  .guide details {
+    padding: 15px
+  }
+
+  .top-actions button {
+    font-size: 12px;
+    padding: 8px 10px
+  }
+}
+
+@media print {
+
+  aside,
+  .top-actions,
+  button,
+  .storage,
+  .controls,
+  #toast {
+    display: none !important
+  }
+
+  .app {
+    display: block
+  }
+
+  main {
+    padding: 0
+  }
+
+  .panel {
+    box-shadow: none;
+    break-inside: avoid
+  }
+
+  .table-wrap {
+    overflow: visible
+  }
+
+  table {
+    font-size: 10px
+  }
+
+  th,
+  td {
+    padding: 5px
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr)
+  }
+
+  .stat strong {
+    font-size: 18px
+  }
+}
+
+[hidden] {
+  display: none !important
+}
+
+body.saving #businessApp,
+body.saving #editor {
+  pointer-events: none;
+  opacity: .7
+}
+
+#loginPanel {
+  width: calc(100% - 32px)
+}
+
+
+/* On phones/tablets, every row becomes a fully labeled card. No columns are hidden. */
+@media screen and (max-width: 800px) {
+  .app {
+    display: block;
+  }
+
+  aside {
+    height: auto;
+    position: static;
+    padding: 20px 16px 12px;
+  }
+
+  .brand {
+    display: flex;
+    gap: 9px;
+    align-items: baseline;
+    border: 0;
+    padding: 0;
+  }
+
+  .brand strong {
+    font-size: 28px;
+  }
+
+  .brand small,
+  .aside-bottom,
+  nav .num {
+    display: none;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    padding-top: 16px;
+    overflow: visible;
+  }
+
+  nav button {
+    padding: 9px 5px;
+    text-align: center;
+    font-size: 13px;
+    min-height: 40px;
+    white-space: normal;
+  }
+
+  main {
+    padding: 22px 14px 40px;
+  }
+
+  .top {
+    gap: 14px;
+  }
+
+  .top-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 8px;
+  }
+
+  .top-actions button {
+    padding: 10px;
+    min-height: 40px;
+  }
+
+  .heading {
+    gap: 14px;
+  }
+
+  .heading>.primary {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .controls input {
+    max-width: none;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table,
+  .wide-table {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  tbody {
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+    background: #f3f6f7;
+  }
+
+  tbody tr {
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+  }
+
+  tbody tr:hover {
+    background: white;
+  }
+
+  td,
+  td.right,
+  td[data-label="Acciones"],
+  td[data-label="Producto / lote"],
+  td[data-label="Decant"],
+  td[data-label="Detalle"],
+  td[data-label="Proveedor / detalle"],
+  td[data-label="Pedido / cliente"] {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    white-space: normal;
+    text-align: right;
+    padding: 10px 12px;
+    position: static;
+    box-shadow: none;
+    border-top: 1px solid #edf0f1;
+  }
+
+  td:first-child {
+    border-top: 0;
+    background: #f8fafb;
+  }
+
+  td::before {
+    content: attr(data-label);
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .cell-value {
+    overflow-wrap: anywhere;
+  }
+
+  td.empty {
+    display: block;
+    text-align: center;
+    padding: 26px 16px;
+  }
+
+  td.empty::before {
+    display: none;
+  }
+
+  .row-actions {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .row-actions button {
+    min-height: 40px;
+  }
+
+  .total td {
+    background: var(--cream);
+  }
+
+  .mobile-tip {
+    display: inline;
+  }
+
+  .desktop-tip {
+    display: none;
+  }
+
+  .pagination {
+    font-size: 12px;
+  }
+
+  .pagination-buttons {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .pagination-buttons button {
+    min-height: 40px;
+  }
+
+  .info-line {
+    flex-wrap: wrap;
+  }
+
+  .info-line>* {
+    min-width: 0;
+  }
+
+  dialog {
+    max-height: 92dvh;
+    width: calc(100% - 20px);
+  }
+
+  .dialog-head {
+    gap: 12px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .field.wide {
+    grid-column: auto;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  nav button {
+    font-size: 12px;
+  }
+
+  td,
+  td.right {
+    gap: 8px;
+  }
+
+  .pagination-buttons span {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media print {
+
+  .table-tools,
+  .pagination,
+  .skip-link {
+    display: none !important;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table,
+  .wide-table {
+    min-width: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 8px;
+  }
+
+  th,
+  td {
+    min-width: 0 !important;
+    max-width: none;
+    padding: 4px;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  td[data-label="Acciones"] {
+    position: static;
+    box-shadow: none;
+  }
+}
